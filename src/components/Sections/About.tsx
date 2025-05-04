@@ -27,10 +27,10 @@ export const About = (props: AboutProps) => {
             viewport={{ once: false, amount: 0.3 }}
           >
             <p className="text-base sm:text-lg text-foreground/80 mb-8">
-              I'm {DATA.name}, a seasoned and adaptable software engineer with 6
-              years of experience building scalable web and mobile applications.
-              My journey in software development has been driven by a passion
-              for continuous learning and staying ahead of emerging
+              I&apos;m {DATA.name}, a seasoned and adaptable software engineer
+              with 6 years of experience building scalable web and mobile
+              applications. My journey in software development has been driven
+              by a passion for continuous learning and staying ahead of emerging
               technologies.
             </p>
             <p className="text-base sm:text-lg text-foreground/80 mb-8">
@@ -41,7 +41,7 @@ export const About = (props: AboutProps) => {
               project I work on is both technically sound and user-friendly.
             </p>
             <p className="text-base sm:text-lg text-foreground/80">
-              When I'm not coding, I like to spend my time watching current
+              When I&apos;m not coding, I like to spend my time watching current
               technology trends, watching movies and playing games.
             </p>
           </motion.div>

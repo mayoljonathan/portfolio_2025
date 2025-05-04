@@ -17,10 +17,10 @@ export const Intro = (props: IntroProps) => {
       >
         <h1 className="text-4xl sm:text-6xl md:text-8xl font-light tracking-tighter mb-8 sm:mb-16">
           <span className="block">Hey there! 👋</span>
-          <span className="block mt-2">I'm {DATA.name}</span>
+          <span className="block mt-2">I&apos;m {DATA.name}</span>
         </h1>
         <p className="text-base sm:text-lg md:text-xl text-foreground/60 max-w-xl">
-          I'm a <span className="font-bold">full stack developer</span>{" "}
+          I&apos;m a <span className="font-bold">full stack developer</span>{" "}
           specializing in building modern web and mobile applications, with
           expertise across the entire development stack and a focus on creating
           seamless user experiences.
