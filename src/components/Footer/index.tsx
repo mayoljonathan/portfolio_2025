@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BaseSection } from "../sections/BaseSection";
+import { BaseSection } from "../Sections/BaseSection";
 import { DATA } from "@/utils/constants";
 
 export const Footer = () => {
