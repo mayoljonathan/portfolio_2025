@@ -4,7 +4,7 @@ import { DATA } from "@/utils/constants";
 
 export const Footer = () => {
   return (
-    <BaseSection className="min-h-0 !pt-0 !pb-4">
+    <BaseSection className="min-h-0 !pt-0 !pb-6">
       <span className="text-foreground/60">
         Copyright © 2025. Built with 💖 using Next.js and Tailwind CSS.{" "}
         <Link
