@@ -2,6 +2,7 @@ import { ComponentPropsWithoutRef, useEffect, useState } from "react";
 import { cn } from "@/utils/ui";
 import { Moon, Sun } from "@phosphor-icons/react";
 import { useTheme } from "next-themes";
+import { sendGAEvent } from "@next/third-parties/google";
 
 type ThemeSwitcherProps = ComponentPropsWithoutRef<"button">;
 
@@ -17,6 +18,12 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
     setMounted(true);
   }, []);
 
+  const handleToggleTheme = () => {
+    const theme = resolvedTheme === "dark" ? "light" : "dark";
+    setTheme(theme);
+    sendGAEvent("event", "themeChanged", theme);
+  };
+
   if (!mounted) {
     return null;
   }
@@ -30,7 +37,7 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
         className
       )}
       aria-label="Toggle theme"
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      onClick={handleToggleTheme}
       {...restProps}
     >
       <Icon size={iconSize} />

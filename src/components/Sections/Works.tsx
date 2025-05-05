@@ -4,10 +4,19 @@ import { ComponentPropsWithoutRef } from "react";
 import { DATA } from "@/utils/constants";
 import Link from "next/link";
 import Image from "next/image";
+import { sendGAEvent } from "@next/third-parties/google";
 
 type WorksProps = ComponentPropsWithoutRef<typeof BaseSection>;
 
 export const Works = (props: WorksProps) => {
+  const handleViewDemoClick = (project: (typeof DATA.projects)[number]) => {
+    sendGAEvent("event", "demoClicked", project);
+  };
+
+  const handleOldPortfolioClick = () => {
+    sendGAEvent("event", "oldPortfolioClicked");
+  };
+
   return (
     <BaseSection {...props}>
       <motion.div
@@ -65,6 +74,7 @@ export const Works = (props: WorksProps) => {
                     href={project.demo_url}
                     target="_blank"
                     className="w-fit text-primary px-3 py-1.5 border hover:bg-primary/10 transition-colors duration-300 text-sm font-medium rounded"
+                    onClick={() => handleViewDemoClick(project)}
                   >
                     View Demo
                   </Link>
@@ -81,6 +91,7 @@ export const Works = (props: WorksProps) => {
               target="_blank"
               className="text-blue-400 hover:text-blue-500"
               href={DATA.old_portfolio_url}
+              onClick={handleOldPortfolioClick}
             >
               old portfolio ✨
             </Link>

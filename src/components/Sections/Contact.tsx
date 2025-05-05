@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { DATA } from "@/utils/constants";
 import { LinkedinLogo, GithubLogo, FacebookLogo } from "@phosphor-icons/react";
 import { BaseSection } from "./BaseSection";
+import { sendGAEvent } from "@next/third-parties/google";
 
 const iconSize = 24;
 
@@ -15,6 +16,14 @@ const socialIcons = {
 type ContactProps = ComponentPropsWithoutRef<typeof BaseSection>;
 
 export const Contact = (props: ContactProps) => {
+  const handleMailToClick = () => {
+    sendGAEvent("event", "mailToClicked");
+  };
+
+  const handleSocialClick = ({ icon }: (typeof DATA.socials)[number]) => {
+    sendGAEvent("event", "socialClicked", icon);
+  };
+
   return (
     <BaseSection {...props}>
       <motion.div
@@ -36,6 +45,7 @@ export const Contact = (props: ContactProps) => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             viewport={{ once: false, amount: 0.3 }}
+            onClick={handleMailToClick}
           >
             {DATA.email}
           </motion.a>
@@ -54,6 +64,7 @@ export const Contact = (props: ContactProps) => {
                   href={item.url}
                   target="_blank"
                   className="text-foreground/60 hover:text-foreground transition-colors duration-300"
+                  onClick={() => handleSocialClick(item)}
                 >
                   {socialIcons[item.icon as keyof typeof socialIcons]}
                 </a>
