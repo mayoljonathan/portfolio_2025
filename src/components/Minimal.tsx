@@ -20,9 +20,11 @@ export const Minimal = () => {
 
   // Track scroll position
   useEffect(() => {
-    const handleScroll = () => {
-      setIsAtTop(window.scrollY < 100); // Show indicator if we're within 100px of the top
-    };
+    if (window.scrollY > 0) {
+      setIsAtTop(false);
+    }
+
+    const handleScroll = () => setIsAtTop(window.scrollY < 100);
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
