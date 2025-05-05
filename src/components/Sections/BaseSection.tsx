@@ -11,7 +11,7 @@ export const BaseSection = ({ id, className, children }: BaseSectionProps) => {
     <section
       id={id}
       className={cn(
-        "min-h-screen flex flex-col justify-center p-12 sm:p-16 md:p-24 lg:p-32",
+        "min-h-dvh flex flex-col justify-center p-12 sm:p-16 md:p-24 lg:p-32",
         className
       )}
     >

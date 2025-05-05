@@ -85,7 +85,7 @@ export const Minimal = () => {
   }, [activeSection]);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-dvh">
       <ThemeSwitcher className="fixed top-4 sm:top-8 right-4 sm:right-8" />
 
       <NavigationDots
