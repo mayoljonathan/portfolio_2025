@@ -58,14 +58,14 @@ export const DATA = {
       avatar_url: "/logo/skaiform.png",
       is_public: true,
       description:
-        "An all-in-one platform that streamlines business operations through an intelligent workflow engine. It unifies siloed data and processes into a seamless ecosystem, replacing disconnected tools with a fully integrated solution built for collaboration and efficiency.",
+        "An all-in-one process automation platform that streamlines business operations with an intelligent workflow engine. It brings together siloed data and processes into a unified ecosystem, replacing fragmented tools with a fully integrated solution built for collaboration and efficiency.",
       demo_url: "https://genesys.storefront.skaiform.com",
     },
     {
       title: "Go Rentals",
       avatar_url: "/logo/gorentals.png",
       description:
-        "An integrated CRM and operations platform developed for Go Rentals, a luxury provider of flight and elite car rental services—built on top of DNA Platform to streamline bookings, customer management, and logistics.",
+        "An integrated CRM and operations platform developed for Go Rentals, a luxury provider of flight and elite car rental services—built on top of DNA Platform to streamline bookings, fleet coordination and customer management into one seamless experience.",
     },
     {
       title: "DNA Platform",
