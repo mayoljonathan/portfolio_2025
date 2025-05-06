@@ -95,7 +95,7 @@ export const DATA = {
       position: "Senior Platform R&D Engineer",
       year: "2020 — 2023",
       description:
-        "Being a core member of the DNA platform, enabling the rapid development and deployment of applications built on top of the platform. Developed in-house libraries for the DNA platform, offering flexibility for use across diverse projects.",
+        "Served as a core contributor to the DNA platform, enabling faster development cycles and deployment of applications built on top of the platform. Developed in-house libraries for the DNA platform, offering flexibility for use across diverse projects.",
     },
     {
       company: "",
