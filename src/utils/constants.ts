@@ -38,6 +38,7 @@ export const DATA = {
     "Prisma",
     "GraphQL",
     "Algolia",
+    "OpenAI",
     "Firebase",
     "AWS",
     "Docker",
@@ -78,7 +79,7 @@ export const DATA = {
       avatar_url: "/logo/vercel.svg",
       is_public: true,
       description:
-        "An online survey web application offering functionality similar to Google Forms.",
+        "An AI-powered online survey web application that enables users to create, distribute, and analyze surveys with ease.",
       demo_url: "https://inquisilearn.vercel.app",
     },
   ],
